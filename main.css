@@ -1,0 +1,136 @@
+body {
+    background-color: rgba(106, 171, 175, 0.774);
+    color: #3a3838;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* height: 80vh; */
+    /* margin: 0; */
+  }
+
+  .title {
+    color: #505050;
+    padding: 0.5em;
+    display: inline-block;
+    line-height: 1.3;
+    background: #dbebf8;
+    vertical-align: middle;
+    border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/
+  }
+
+
+  ol {
+  background-color: azure;
+  color: #000000;
+  width: 400px;
+  position: relative; left: 100px;
+  border: 2px skyblue dashed; /*2px 水色 破線を指定*/
+  }
+
+  ol li {
+    margin-top: 10px; 
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    margin: auto; 
+  }
+  
+  h4 {
+    margin-left: 400px;
+  }
+
+  h2 {
+    position: relative;
+    padding-bottom: 0.5em;
+    border-bottom: 4px solid #ffffff;
+  }
+  h2::after {
+    position: absolute;
+    content: " ";
+    border-bottom: solid 4px #ff682c;
+    bottom: -4px;
+    width: 8%;
+    display: block;
+  }
+
+
+
+/* ワニ放出 */
+  .green-square {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(18, 136, 18);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
+  }
+  
+  .blue-square {
+    width: 300px;
+    height:　;
+    background-color: rgb(59, 59, 252);
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto; 
+  }
+  
+  #waniContainer span {
+    font-size: 24px;
+  }
+
+
+
+/* アニマル大脱出 */
+  .orange-square {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 136, 24);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
+  }
+  
+  .orange-square input {
+    margin-bottom: 10px;
+  }
+  
+  .gray-square {
+    width: 50px;
+    height: 100px;
+    background-color: gray;
+    /* margin-top: 10px; */
+    margin-right: 10px;
+  }
+
+  .yellow-square {
+    width:　;
+    height:　;
+    background-color: rgba(255, 255, 0, 0);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto; 
+    animation: flowAnimals 10s linear infinite;
+  }
+
+  @keyframes flowAnimals {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  #animalContainer span {
+    font-size: 30px;
+    margin: 0 5px;
+  }
