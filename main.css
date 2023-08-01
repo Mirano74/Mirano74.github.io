@@ -18,7 +18,6 @@ body {
     border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/
   }
 
-
   ol {
   background-color: azure;
   color: #000000;
@@ -30,14 +29,6 @@ body {
   ol li {
     margin-top: 10px; 
     margin-bottom: 10px;
-  }
-
-  h4 {
-    margin: auto; 
-  }
-  
-  h4 {
-    margin-left: 400px;
   }
 
   h2 {
@@ -53,7 +44,6 @@ body {
     width: 8%;
     display: block;
   }
-
 
 
 /* ワニ放出 */
@@ -86,10 +76,10 @@ body {
 
 
 /* アニマル大脱出 */
-  .orange-square {
-    width: 200px;
+  .black-square {
+    width: 300px;
     height: 200px;
-    background-color: rgb(255, 136, 24);
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +87,7 @@ body {
     margin: auto; 
   }
   
-  .orange-square input {
+  .black-square input {
     margin-bottom: 10px;
   }
   
@@ -133,4 +123,114 @@ body {
   #animalContainer span {
     font-size: 30px;
     margin: 0 5px;
+  }
+
+  .btn,
+  .btn *,
+  .btn :after,
+  .btn :before,
+  .btn:after,
+  .btn:before {
+    border: 0 solid;
+    box-sizing: border-box;
+  }
+  .btn {
+    -webkit-tap-highlight-color: transparent;
+    /* -webkit-appearance: button; */
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    /* -webkit-mask-image: -webkit-radial-gradient(#000, #fff); */
+    padding: 0;
+  }
+  .btn:disabled {
+    cursor: default;
+  }
+  .btn:-moz-focusring {
+    outline: auto;
+  }
+  .btn svg {
+    display: block;
+    /* vertical-align: middle; */
+  }
+  .btn [hidden] {
+    display: none;
+  }
+  .btn {
+    --neon: #0ea5e9;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    /* -webkit-mask-image: none; */
+    outline: 4px solid #fff;
+    outline-offset: -4px;
+    overflow: hidden;
+    padding: 1.2rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+    transition: 0.2s linear 0.1s;
+  }
+  .btn:hover {
+    background: var(--neon);
+    box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon),
+      0 0 100px var(--neon);
+    color: #fff;
+    outline-color: transparent;
+    transition: 0.2s linear 0.6s;
+  }
+  .btn span {
+    display: block;
+    inset: 0;
+    position: absolute;
+  }
+  .btn .top {
+    border-top: 4px solid var(--neon);
+    opacity: 0;
+    transform: translateX(calc(-100% + var(--progress, 0%)));
+    transition: none;
+  }
+  .btn:hover .top {
+    --progress: 100%;
+    opacity: 1;
+    transition: transform 0.2s linear;
+  }
+  .btn .right {
+    border-right: 4px solid var(--neon);
+    opacity: 0;
+    transform: translateY(calc(-100% + var(--progress, 0%)));
+    transition: none;
+  }
+  .btn:hover .right {
+    --progress: 100%;
+    opacity: 1;
+    transition: transform 0.2s linear 0.2s;
+  }
+  .btn .bottom {
+    border-bottom: 4px solid var(--neon);
+    opacity: 0;
+    transform: translateX(calc(100% - var(--progress, 0%)));
+    transition: none;
+  }
+  .btn:hover .bottom {
+    --progress: 100%;
+    opacity: 1;
+    transition: transform 0.2s linear 0.4s;
+  }
+  .btn .left {
+    border-left: 4px solid var(--neon);
+    opacity: 0;
+    transform: translateY(calc(100% - var(--progress, 0%)));
+    transition: none;
+  }
+  .btn:hover .left {
+    --progress: 100%;
+    opacity: 1;
+    transition: transform 0.2s linear 0.6s;
   }
